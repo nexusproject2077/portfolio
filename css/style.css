@@ -810,3 +810,117 @@ body {
         gap: 20px;
     }
 }
+
+/* ============================================
+   STATES ADDITIONNELS POUR LE JAVASCRIPT
+   ============================================ */
+
+/* Navbar transition */
+.navbar {
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+/* Active link */
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Erreurs de formulaire */
+.error-message {
+    color: #ef4444;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    animation: shake 0.3s ease;
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border-color: #ef4444 !important;
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Animations de notification */
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+/* Hero content initial state */
+.hero-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Bouton scroll to top */
+.scroll-top-btn:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 8px 20px rgba(99,102,241,0.4) !important;
+}
+
+/* Mobile specific */
+.mobile-device .hero-title {
+    font-size: 32px;
+}
+
+.mobile-device .section-title {
+    font-size: 36px;
+}
+
+/* Preloader (si tu en ajoutes un) */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.preloader::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--gray-light);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
