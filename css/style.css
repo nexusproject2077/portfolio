@@ -924,3 +924,26 @@ body {
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
+
+/* reCAPTCHA badge styling */
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+/* Info reCAPTCHA */
+.recaptcha-info {
+    font-size: 11px;
+    color: var(--gray);
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+.recaptcha-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.recaptcha-info a:hover {
+    text-decoration: underline;
+}
