@@ -328,7 +328,7 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
+   <!-- CONTACT -->
 <section id="contact" class="contact">
     <div class="container">
         <div class="section-header">
@@ -401,58 +401,131 @@
             </div>
 
             <form class="contact-form" id="contact-form" action="https://formspree.io/f/xzdarrdy" method="POST">
+                
+                <!-- ===== PARAMÈTRES FORMSPREE OPTIMISÉS ===== -->
+                
+                <!-- Sujet de l'email personnalisé -->
+                <input type="hidden" name="_subject" value="🚀 Nouveau projet web - Portfolio Meric.dev">
+                
+                <!-- Redirection après envoi (reste sur ton site) -->
+                <input type="hidden" name="_next" value="https://nexusproject2077.github.io/portfolio/#contact">
+                
+                <!-- Template d'email amélioré -->
+                <input type="hidden" name="_template" value="box">
+                
+                <!-- Désactive le captcha Formspree (optionnel) -->
+                <input type="hidden" name="_captcha" value="false">
+                
+                <!-- Auto-réponse au client (configurer dans Formspree Dashboard) -->
+                <input type="hidden" name="_autoresponse" value="Merci pour votre message ! Je vous répondrai sous 24h.">
+                
+                <!-- ===== FIN PARAMÈTRES FORMSPREE ===== -->
+                
                 <div class="form-row">
                     <div class="form-group">
                         <label for="nom">Nom complet *</label>
-                        <input type="text" id="nom" name="nom" required>
+                        <input type="text" id="nom" name="👤 Nom complet" placeholder="Jean Dupont" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="_replyto" placeholder="jean@exemple.fr" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="telephone">Téléphone</label>
-                        <input type="tel" id="telephone" name="telephone">
+                        <input type="tel" id="telephone" name="📱 Téléphone" placeholder="06 12 34 56 78">
                     </div>
                     <div class="form-group">
+                        <label for="entreprise">Entreprise</label>
+                        <input type="text" id="entreprise" name="🏢 Entreprise" placeholder="Nom de votre entreprise">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
                         <label for="type-projet">Type de projet *</label>
-                        <select id="type-projet" name="type-projet" required>
+                        <select id="type-projet" name="🎯 Type de projet" required>
                             <option value="">Sélectionnez...</option>
-                            <option value="vitrine">Site vitrine</option>
-                            <option value="ecommerce">E-commerce</option>
-                            <option value="autre">Autre</option>
+                            <option value="Site vitrine">Site vitrine</option>
+                            <option value="E-commerce">E-commerce</option>
+                            <option value="Application web">Application web</option>
+                            <option value="Refonte de site existant">Refonte de site existant</option>
+                            <option value="Maintenance/Support">Maintenance/Support</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget estimé *</label>
+                        <select id="budget" name="💰 Budget estimé" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="Moins de 500€">Moins de 500€</option>
+                            <option value="500€ - 1000€">500€ - 1000€</option>
+                            <option value="1000€ - 2000€">1000€ - 2000€</option>
+                            <option value="2000€ - 3000€">2000€ - 3000€</option>
+                            <option value="3000€ et plus">3000€ et plus</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="budget">Budget estimé *</label>
-                    <select id="budget" name="budget" required>
+                    <label for="delai">Délai souhaité</label>
+                    <select id="delai" name="⏱️ Délai souhaité">
                         <option value="">Sélectionnez...</option>
-                        <option value="500-1000">500€ - 1000€</option>
-                        <option value="1000-2000">1000€ - 2000€</option>
-                        <option value="2000+">2000€ et plus</option>
+                        <option value="Urgent (moins de 2 semaines)">Urgent (moins de 2 semaines)</option>
+                        <option value="2-4 semaines">2-4 semaines</option>
+                        <option value="1-2 mois">1-2 mois</option>
+                        <option value="2-3 mois">2-3 mois</option>
+                        <option value="Flexible">Flexible</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="message">Décrivez votre projet *</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="📝 Description du projet" rows="6" placeholder="Décrivez vos besoins, objectifs, fonctionnalités souhaitées..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="source">Comment m'avez-vous trouvé ?</label>
+                    <select id="source" name="🔍 Source">
+                        <option value="">Sélectionnez...</option>
+                        <option value="Google">Google</option>
+                        <option value="LinkedIn">LinkedIn</option>
+                        <option value="Recommandation">Recommandation</option>
+                        <option value="Facebook/Instagram">Facebook/Instagram</option>
+                        <option value="Autre réseau social">Autre réseau social</option>
+                        <option value="Autre">Autre</option>
+                    </select>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-submit">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 8px;">
+                        <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                     Envoyer ma demande
                 </button>
 
-                <p class="form-notice">* Champs obligatoires</p>
+                <p class="form-notice">* Champs obligatoires - Vos données sont sécurisées et ne seront jamais partagées</p>
             </form>
 
         </div>
+
+        <!-- Message de confirmation (affiché après envoi) -->
+        <div class="form-success" id="form-success" style="display: none;">
+            <div class="success-icon">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32" cy="32" r="30" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="4"/>
+                    <path d="M20 32L28 40L44 24" stroke="#10b981" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h3>Message envoyé avec succès ! ✅</h3>
+            <p>Merci pour votre demande. Je vous répondrai dans les 24 heures.</p>
+            <button onclick="window.location.reload()" class="btn btn-secondary" style="margin-top: 20px;">Envoyer un autre message</button>
+        </div>
+
     </div>
-                        </section>
+</section>
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
