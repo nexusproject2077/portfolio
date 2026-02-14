@@ -604,3 +604,74 @@ const checkElements = () => {
 };
 
 checkElements();
+
+// ============================================
+// GOOGLE reCAPTCHA v3 - PROTECTION ANTI-SPAM
+// ============================================
+
+// Fonction appelée quand le reCAPTCHA est validé
+function onSubmit(token) {
+    // Le formulaire est maintenant soumis automatiquement
+    document.getElementById("contact-form").submit();
+}
+
+// Gestion du formulaire avec reCAPTCHA
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Empêche la soumission directe
+        
+        // Validation des champs
+        let isValid = true;
+        const requiredFields = contactForm.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.classList.add('error');
+                
+                if (!field.parentElement.querySelector('.error-message')) {
+                    const errorMsg = document.createElement('span');
+                    errorMsg.className = 'error-message';
+                    errorMsg.textContent = 'Ce champ est obligatoire';
+                    field.parentElement.appendChild(errorMsg);
+                }
+            } else {
+                field.classList.remove('error');
+                const errorMsg = field.parentElement.querySelector('.error-message');
+                if (errorMsg) {
+                    errorMsg.remove();
+                }
+            }
+        });
+        
+        if (!isValid) {
+            const firstError = contactForm.querySelector('.error');
+            if (firstError) {
+                firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                firstError.focus();
+            }
+            return;
+        }
+        
+        // Si tout est OK, déclenche le reCAPTCHA
+        const submitBtn = document.getElementById('submit-btn');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Vérification en cours...</span>';
+        
+        // Exécute le reCAPTCHA invisible
+        grecaptcha.execute();
+    });
+    
+    // Enlève l'erreur quand l'utilisateur tape
+    const inputs = contactForm.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('input', function() {
+            this.classList.remove('error');
+            const errorMsg = this.parentElement.querySelector('.error-message');
+            if (errorMsg) {
+                errorMsg.remove();
+            }
+        });
+    });
+}
