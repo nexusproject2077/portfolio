@@ -118,6 +118,12 @@ body {
     width: 100%;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -287,6 +293,114 @@ body {
         font-size: 28px;
     }
 }
+/* ============================================
+   BOUTONS
+   ============================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #8b5cf6 100%);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--dark);
+    border: 2px solid var(--gray-light);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 10px;
+    padding: 18px 32px;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.5);
+}
+
+.btn-submit.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* ============================================
+   LANGUAGE SWITCHER
+   ============================================ */
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 20px;
+    background: var(--bg-light);
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.lang-btn {
+    padding: 6px 12px;
+    border: none;
+    background: transparent;
+    font-family: var(--font-primary);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.lang-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.lang-btn:hover:not(.active) {
+    color: var(--primary-color);
+}
+
 /* ============================================
    SECTIONS COMMUNES
    ============================================ */
@@ -680,11 +794,6 @@ body {
     resize: vertical;
 }
 
-.btn-submit {
-    width: 100%;
-    margin-top: 10px;
-}
-
 .form-notice {
     text-align: center;
     font-size: 13px;
@@ -754,6 +863,10 @@ body {
     
     .hamburger {
         display: flex;
+    }
+
+    .lang-switcher {
+        margin-left: 0;
     }
     
     .nav-menu {

@@ -9,25 +9,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-    
+
     <!-- NAVIGATION -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#accueil" class="logo">Meric<span>.dev</span></a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#accueil" class="nav-link">Accueil</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#projets" class="nav-link">Projets</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#accueil" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+                <li><a href="#projets" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-right">
+                <div class="lang-switcher" id="lang-switcher">
+                    <button class="lang-btn active" data-lang="fr">FR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
@@ -36,29 +42,29 @@
     <section id="accueil" class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <span class="hero-tag">Développeur Web Freelance</span>
-                <h1 class="hero-title">
-                    Je crée votre <span class="gradient-text">site web professionnel</span> en 2 semaines
+                <span class="hero-tag" data-i18n="hero.tag">Développeur Web Freelance</span>
+                <h1 class="hero-title" data-i18n="hero.title">
+                    Je crée votre <span class="gradient-text" data-i18n="hero.title_highlight">site web professionnel</span> en 2 semaines
                 </h1>
-                <p class="hero-description">
+                <p class="hero-description" data-i18n="hero.description">
                     Développeur Full-Stack avec 6 ans d'expérience. Spécialisé dans les sites vitrines et e-commerce pour PME de l'Aube.
                 </p>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Demander un devis gratuit</a>
-                    <a href="#projets" class="btn btn-secondary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.cta_primary">Demander un devis gratuit</a>
+                    <a href="#projets" class="btn btn-secondary" data-i18n="hero.cta_secondary">Voir mes projets</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-number">6+</span>
-                        <span class="stat-label">Années d'expérience</span>
+                        <span class="stat-label" data-i18n="hero.stat1">Années d'expérience</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number">15+</span>
-                        <span class="stat-label">Projets réalisés</span>
+                        <span class="stat-label" data-i18n="hero.stat2">Projets réalisés</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number">2 sem</span>
-                        <span class="stat-label">Délai moyen</span>
+                        <span class="stat-label" data-i18n="hero.stat3">Délai moyen</span>
                     </div>
                 </div>
             </div>
@@ -69,13 +75,13 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Mes offres</span>
-                <h2 class="section-title">Services & Tarifs</h2>
-                <p class="section-description">Des packages clairs et transparents adaptés à vos besoins</p>
+                <span class="section-tag" data-i18n="services.tag">Mes offres</span>
+                <h2 class="section-title" data-i18n="services.title">Services & Tarifs</h2>
+                <p class="section-description" data-i18n="services.description">Des packages clairs et transparents adaptés à vos besoins</p>
             </div>
 
             <div class="services-grid">
-                
+
                 <!-- Package 1 -->
                 <div class="service-card">
                     <div class="service-icon">
@@ -91,25 +97,25 @@
                         <span class="price-label">TTC</span>
                     </div>
                     <ul class="service-features">
-                        <li>✓ Site vitrine 5 pages</li>
-                        <li>✓ Design responsive (mobile/tablette)</li>
-                        <li>✓ Formulaire de contact</li>
-                        <li>✓ Optimisation SEO de base</li>
-                        <li>✓ Hébergement 1 an offert</li>
+                        <li data-i18n="services.starter.f1">✓ Site vitrine 5 pages</li>
+                        <li data-i18n="services.starter.f2">✓ Design responsive (mobile/tablette)</li>
+                        <li data-i18n="services.starter.f3">✓ Formulaire de contact</li>
+                        <li data-i18n="services.starter.f4">✓ Optimisation SEO de base</li>
+                        <li data-i18n="services.starter.f5">✓ Hébergement 1 an offert</li>
                     </ul>
-                    <div class="service-time">
+                    <div class="service-time" data-i18n="services.starter.time">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
                             <circle cx="8" cy="8" r="7" stroke="#6366f1" stroke-width="2"/>
                             <path d="M8 4V8L11 11" stroke="#6366f1" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                         Livraison : 2 semaines
                     </div>
-                    <a href="#contact" class="btn btn-outline">Commander</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="services.order">Commander</a>
                 </div>
 
                 <!-- Package 2 -->
                 <div class="service-card featured">
-                    <div class="featured-badge">Populaire</div>
+                    <div class="featured-badge" data-i18n="services.popular">Populaire</div>
                     <div class="service-icon">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="6" y="10" width="36" height="28" rx="2" stroke="#6366f1" stroke-width="2"/>
@@ -128,20 +134,20 @@
                         <span class="price-label">TTC</span>
                     </div>
                     <ul class="service-features">
-                        <li>✓ Site vitrine 10 pages</li>
-                        <li>✓ CMS intégré (gestion facile)</li>
-                        <li>✓ Intégration réseaux sociaux</li>
-                        <li>✓ Google Analytics + Search Console</li>
-                        <li>✓ 1 mois de support gratuit</li>
+                        <li data-i18n="services.business.f1">✓ Site vitrine 10 pages</li>
+                        <li data-i18n="services.business.f2">✓ CMS intégré (gestion facile)</li>
+                        <li data-i18n="services.business.f3">✓ Intégration réseaux sociaux</li>
+                        <li data-i18n="services.business.f4">✓ Google Analytics + Search Console</li>
+                        <li data-i18n="services.business.f5">✓ 1 mois de support gratuit</li>
                     </ul>
-                    <div class="service-time">
+                    <div class="service-time" data-i18n="services.business.time">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
                             <circle cx="8" cy="8" r="7" stroke="#6366f1" stroke-width="2"/>
                             <path d="M8 4V8L11 11" stroke="#6366f1" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                         Livraison : 3 semaines
                     </div>
-                    <a href="#contact" class="btn btn-primary">Commander</a>
+                    <a href="#contact" class="btn btn-primary" data-i18n="services.order">Commander</a>
                 </div>
 
                 <!-- Package 3 -->
@@ -162,20 +168,20 @@
                         <span class="price-label">TTC</span>
                     </div>
                     <ul class="service-features">
-                        <li>✓ Boutique en ligne complète</li>
-                        <li>✓ Paiement sécurisé (Stripe/PayPal)</li>
-                        <li>✓ Gestion produits & stock</li>
-                        <li>✓ Tunnel de commande optimisé</li>
-                        <li>✓ Formation client incluse</li>
+                        <li data-i18n="services.ecommerce.f1">✓ Boutique en ligne complète</li>
+                        <li data-i18n="services.ecommerce.f2">✓ Paiement sécurisé (Stripe/PayPal)</li>
+                        <li data-i18n="services.ecommerce.f3">✓ Gestion produits & stock</li>
+                        <li data-i18n="services.ecommerce.f4">✓ Tunnel de commande optimisé</li>
+                        <li data-i18n="services.ecommerce.f5">✓ Formation client incluse</li>
                     </ul>
-                    <div class="service-time">
+                    <div class="service-time" data-i18n="services.ecommerce.time">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
                             <circle cx="8" cy="8" r="7" stroke="#6366f1" stroke-width="2"/>
                             <path d="M8 4V8L11 11" stroke="#6366f1" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                         Livraison : 5 semaines
                     </div>
-                    <a href="#contact" class="btn btn-outline">Commander</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="services.order">Commander</a>
                 </div>
 
             </div>
@@ -186,9 +192,9 @@
     <section id="projets" class="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Portfolio</span>
-                <h2 class="section-title">Projets Réalisés</h2>
-                <p class="section-description">Une sélection de mes réalisations techniques</p>
+                <span class="section-tag" data-i18n="projects.tag">Portfolio</span>
+                <h2 class="section-title" data-i18n="projects.title">Projets Réalisés</h2>
+                <p class="section-description" data-i18n="projects.description">Une sélection de mes réalisations techniques</p>
             </div>
 
             <div class="projects-grid">
@@ -198,7 +204,7 @@
                     <div class="project-image">
                         <img src="images/projets/nexus-social.jpg" alt="Nexus Social - Plateforme sociale">
                         <div class="project-overlay">
-                            <a href="#" class="project-link" target="_blank">Voir le projet</a>
+                            <a href="#" class="project-link" target="_blank" data-i18n="projects.view">Voir le projet</a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -208,7 +214,7 @@
                             <span class="tag">JavaScript</span>
                         </div>
                         <h3 class="project-title">Nexus Social</h3>
-                        <p class="project-description">
+                        <p class="project-description" data-i18n="projects.nexus.desc">
                             Plateforme sociale complète avec système d'authentification, publications dynamiques, messagerie instantanée et système de likes/commentaires. 5000+ lignes de code.
                         </p>
                         <div class="project-features">
@@ -218,21 +224,21 @@
                                     <path d="M7 8V6C7 4.34315 8.34315 3 10 3C11.6569 3 13 4.34315 13 6V8" stroke="#6366f1" stroke-width="1.5"/>
                                     <circle cx="10" cy="12" r="1.5" fill="#6366f1"/>
                                 </svg>
-                                <span>Authentification sécurisée</span>
+                                <span data-i18n="projects.nexus.feat1">Authentification sécurisée</span>
                             </div>
                             <div class="feature">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2" y="4" width="16" height="12" rx="2" stroke="#6366f1" stroke-width="1.5"/>
                                     <path d="M6 8H14M6 11H11" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/>
                                 </svg>
-                                <span>Messagerie temps réel</span>
+                                <span data-i18n="projects.nexus.feat2">Messagerie temps réel</span>
                             </div>
                             <div class="feature">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="4" y="3" width="12" height="14" rx="1.5" stroke="#6366f1" stroke-width="1.5"/>
                                     <path d="M8 7H12M8 10H12M8 13H10" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/>
                                 </svg>
-                                <span>Interface responsive</span>
+                                <span data-i18n="projects.nexus.feat3">Interface responsive</span>
                             </div>
                         </div>
                     </div>
@@ -243,7 +249,7 @@
                     <div class="project-image">
                         <img src="images/projets/flux-ecommerce.jpg" alt="FLUX - E-commerce streetwear">
                         <div class="project-overlay">
-                            <a href="#" class="project-link" target="_blank">Voir le projet</a>
+                            <a href="#" class="project-link" target="_blank" data-i18n="projects.view">Voir le projet</a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -253,7 +259,7 @@
                             <span class="tag">MySQL</span>
                         </div>
                         <h3 class="project-title">FLUX E-commerce</h3>
-                        <p class="project-description">
+                        <p class="project-description" data-i18n="projects.flux.desc">
                             Boutique en ligne streetwear avec catalogue produits, panier dynamique, gestion des commandes et interface d'administration complète.
                         </p>
                         <div class="project-features">
@@ -263,7 +269,7 @@
                                     <circle cx="7" cy="16.5" r="1.5" fill="#6366f1"/>
                                     <circle cx="15" cy="16.5" r="1.5" fill="#6366f1"/>
                                 </svg>
-                                <span>Catalogue avec filtres</span>
+                                <span data-i18n="projects.flux.feat1">Catalogue avec filtres</span>
                             </div>
                             <div class="feature">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -271,14 +277,14 @@
                                     <path d="M3 9H17" stroke="#6366f1" stroke-width="1.5"/>
                                     <path d="M6 12H10" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/>
                                 </svg>
-                                <span>Paiement intégré</span>
+                                <span data-i18n="projects.flux.feat2">Paiement intégré</span>
                             </div>
                             <div class="feature">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="3" y="5" width="14" height="11" rx="1.5" stroke="#6366f1" stroke-width="1.5"/>
                                     <path d="M3 8H17M7 12V13M10 11V13M13 10V13" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/>
                                 </svg>
-                                <span>Panel administrateur</span>
+                                <span data-i18n="projects.flux.feat3">Panel administrateur</span>
                             </div>
                         </div>
                     </div>
@@ -289,7 +295,7 @@
                     <div class="project-image">
                         <img src="images/projets/bmw-site.jpg" alt="Site vitrine BMW">
                         <div class="project-overlay">
-                            <a href="#" class="project-link" target="_blank">Voir le projet</a>
+                            <a href="#" class="project-link" target="_blank" data-i18n="projects.view">Voir le projet</a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -298,8 +304,8 @@
                             <span class="tag">CSS3</span>
                             <span class="tag">JavaScript</span>
                         </div>
-                        <h3 class="project-title">Site Vitrine BMW</h3>
-                        <p class="project-description">
+                        <h3 class="project-title" data-i18n="projects.bmw.title">Site Vitrine BMW</h3>
+                        <p class="project-description" data-i18n="projects.bmw.desc">
                             Site corporate responsive réalisé dans le cadre d'un projet académique (IUT Troyes). Design moderne, animations fluides et optimisation SEO. Note : 18/20.
                         </p>
                         <div class="project-features">
@@ -308,19 +314,19 @@
                                     <path d="M4 4L10 2L16 4V10C16 14 10 18 10 18C10 18 4 14 4 10V4Z" stroke="#6366f1" stroke-width="1.5" stroke-linejoin="round"/>
                                     <path d="M7.5 10L9.5 12L13 8" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>Design professionnel</span>
+                                <span data-i18n="projects.bmw.feat1">Design professionnel</span>
                             </div>
                             <div class="feature">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10 3L12 9H18L13 13L15 19L10 15L5 19L7 13L2 9H8L10 3Z" stroke="#6366f1" stroke-width="1.5" stroke-linejoin="round"/>
                                 </svg>
-                                <span>Animations fluides</span>
+                                <span data-i18n="projects.bmw.feat2">Animations fluides</span>
                             </div>
                             <div class="feature">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M3 10L7 6M7 6L10 3L13 6M7 6V14M17 10L13 14M13 14L10 17L7 14M13 14V6" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>SEO optimisé</span>
+                                <span data-i18n="projects.bmw.feat3">SEO optimisé</span>
                             </div>
                         </div>
                     </div>
@@ -334,15 +340,15 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Parlons de votre projet</span>
-                <h2 class="section-title">Demander un Devis</h2>
-                <p class="section-description">Réponse garantie sous 24h</p>
+                <span class="section-tag" data-i18n="contact.tag">Parlons de votre projet</span>
+                <h2 class="section-title" data-i18n="contact.title">Demander un Devis</h2>
+                <p class="section-description" data-i18n="contact.description">Réponse garantie sous 24h</p>
             </div>
 
             <div class="contact-content">
-                
+
                 <div class="contact-info">
-                    <h3>Informations de contact</h3>
+                    <h3 data-i18n="contact.info_title">Informations de contact</h3>
                     <div class="info-item">
                         <span class="info-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -362,7 +368,7 @@
                             </svg>
                         </span>
                         <div>
-                            <div class="info-label">Téléphone</div>
+                            <div class="info-label" data-i18n="contact.phone_label">Téléphone</div>
                             <a href="tel:+33783643942" class="info-value">07 83 64 39 42</a>
                         </div>
                     </div>
@@ -374,7 +380,7 @@
                             </svg>
                         </span>
                         <div>
-                            <div class="info-label">Localisation</div>
+                            <div class="info-label" data-i18n="contact.location_label">Localisation</div>
                             <span class="info-value">Troyes, Aube (10)</span>
                         </div>
                     </div>
@@ -386,8 +392,8 @@
                             </svg>
                         </span>
                         <div>
-                            <div class="info-label">Disponibilité</div>
-                            <span class="info-value">Lun - Ven : 9h - 18h</span>
+                            <div class="info-label" data-i18n="contact.availability_label">Disponibilité</div>
+                            <span class="info-value" data-i18n="contact.availability_value">Lun - Ven : 9h - 18h</span>
                         </div>
                     </div>
 
@@ -403,93 +409,93 @@
                 </div>
 
                 <form class="contact-form" id="contact-form" action="https://formspree.io/f/xzdarrdy" method="POST">
-    
+
     <!-- PARAMÈTRES FORMSPREE -->
     <input type="hidden" name="_subject" value="Nouveau projet web - Portfolio Meric.dev">
     <input type="hidden" name="_next" value="https://nexusproject2077.github.io/portfolio/#contact">
-    
+
     <div class="form-row">
         <div class="form-group">
-            <label for="nom">Nom complet *</label>
-            <input type="text" id="nom" name="Nom complet" placeholder="Jean Dupont" required>
+            <label for="nom" data-i18n="contact.form.name">Nom complet *</label>
+            <input type="text" id="nom" name="Nom complet" placeholder="Jean Dupont" data-i18n-placeholder="contact.form.name_placeholder" required>
         </div>
         <div class="form-group">
             <label for="email">Email *</label>
-            <input type="email" id="email" name="email" placeholder="jean@exemple.fr" required>
+            <input type="email" id="email" name="email" placeholder="jean@exemple.fr" data-i18n-placeholder="contact.form.email_placeholder" required>
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group">
-            <label for="telephone">Téléphone</label>
+            <label for="telephone" data-i18n="contact.form.phone">Téléphone</label>
             <input type="tel" id="telephone" name="Telephone" placeholder="06 12 34 56 78">
         </div>
         <div class="form-group">
-            <label for="entreprise">Entreprise</label>
-            <input type="text" id="entreprise" name="Entreprise" placeholder="Nom de votre entreprise">
+            <label for="entreprise" data-i18n="contact.form.company">Entreprise</label>
+            <input type="text" id="entreprise" name="Entreprise" placeholder="Nom de votre entreprise" data-i18n-placeholder="contact.form.company_placeholder">
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group">
-            <label for="type-projet">Type de projet *</label>
+            <label for="type-projet" data-i18n="contact.form.project_type">Type de projet *</label>
             <select id="type-projet" name="Type de projet" required>
-                <option value="">Sélectionnez...</option>
-                <option value="Site vitrine">Site vitrine</option>
+                <option value="" data-i18n="contact.form.select">Sélectionnez...</option>
+                <option value="Site vitrine" data-i18n="contact.form.type_showcase">Site vitrine</option>
                 <option value="E-commerce">E-commerce</option>
-                <option value="Application web">Application web</option>
-                <option value="Refonte de site existant">Refonte de site existant</option>
+                <option value="Application web" data-i18n="contact.form.type_webapp">Application web</option>
+                <option value="Refonte de site existant" data-i18n="contact.form.type_redesign">Refonte de site existant</option>
                 <option value="Maintenance/Support">Maintenance/Support</option>
-                <option value="Autre">Autre</option>
+                <option value="Autre" data-i18n="contact.form.type_other">Autre</option>
             </select>
         </div>
         <div class="form-group">
-            <label for="budget">Budget estimé *</label>
+            <label for="budget" data-i18n="contact.form.budget">Budget estimé *</label>
             <select id="budget" name="Budget estime" required>
-                <option value="">Sélectionnez...</option>
-                <option value="Moins de 500€">Moins de 500€</option>
+                <option value="" data-i18n="contact.form.select">Sélectionnez...</option>
+                <option value="Moins de 500€" data-i18n="contact.form.budget_1">Moins de 500€</option>
                 <option value="500€ - 1000€">500€ - 1000€</option>
                 <option value="1000€ - 2000€">1000€ - 2000€</option>
                 <option value="2000€ - 3000€">2000€ - 3000€</option>
-                <option value="3000€ et plus">3000€ et plus</option>
+                <option value="3000€ et plus" data-i18n="contact.form.budget_5">3000€ et plus</option>
             </select>
         </div>
     </div>
 
     <div class="form-group">
-        <label for="delai">Délai souhaité</label>
+        <label for="delai" data-i18n="contact.form.deadline">Délai souhaité</label>
         <select id="delai" name="Delai souhaite">
-            <option value="">Sélectionnez...</option>
-            <option value="Urgent (moins de 2 semaines)">Urgent (moins de 2 semaines)</option>
-            <option value="2-4 semaines">2-4 semaines</option>
-            <option value="1-2 mois">1-2 mois</option>
-            <option value="2-3 mois">2-3 mois</option>
-            <option value="Flexible">Flexible</option>
+            <option value="" data-i18n="contact.form.select">Sélectionnez...</option>
+            <option value="Urgent (moins de 2 semaines)" data-i18n="contact.form.deadline_urgent">Urgent (moins de 2 semaines)</option>
+            <option value="2-4 semaines" data-i18n="contact.form.deadline_2">2-4 semaines</option>
+            <option value="1-2 mois" data-i18n="contact.form.deadline_3">1-2 mois</option>
+            <option value="2-3 mois" data-i18n="contact.form.deadline_4">2-3 mois</option>
+            <option value="Flexible" data-i18n="contact.form.deadline_flex">Flexible</option>
         </select>
     </div>
 
     <div class="form-group">
-        <label for="message">Décrivez votre projet *</label>
-        <textarea id="message" name="Description du projet" rows="6" placeholder="Décrivez vos besoins, objectifs, fonctionnalités souhaitées..." required></textarea>
+        <label for="message" data-i18n="contact.form.message">Décrivez votre projet *</label>
+        <textarea id="message" name="Description du projet" rows="6" placeholder="Décrivez vos besoins, objectifs, fonctionnalités souhaitées..." data-i18n-placeholder="contact.form.message_placeholder" required></textarea>
     </div>
 
     <div class="form-group">
-        <label for="source">Comment m'avez-vous trouvé ?</label>
+        <label for="source" data-i18n="contact.form.source">Comment m'avez-vous trouvé ?</label>
         <select id="source" name="Source">
-            <option value="">Sélectionnez...</option>
+            <option value="" data-i18n="contact.form.select">Sélectionnez...</option>
             <option value="Google">Google</option>
             <option value="LinkedIn">LinkedIn</option>
-            <option value="Recommandation">Recommandation</option>
+            <option value="Recommandation" data-i18n="contact.form.source_referral">Recommandation</option>
             <option value="Facebook/Instagram">Facebook/Instagram</option>
-            <option value="Autre réseau social">Autre réseau social</option>
-            <option value="Autre">Autre</option>
+            <option value="Autre réseau social" data-i18n="contact.form.source_other_social">Autre réseau social</option>
+            <option value="Autre" data-i18n="contact.form.type_other">Autre</option>
         </select>
     </div>
 
     <!-- ===== RECAPTCHA (INVISIBLE) ===== -->
-    <div class="g-recaptcha" 
-         data-sitekey="6LfVOWssAAAAFtvobRhREnIdtngehAkuw-f7dJ9" 
-         data-callback="onSubmit" 
+    <div class="g-recaptcha"
+         data-sitekey="6LfVOWssAAAAFtvobRhREnIdtngehAkuw-f7dJ9"
+         data-callback="onSubmit"
          data-size="invisible">
     </div>
 
@@ -497,13 +503,13 @@
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 8px;">
             <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        Envoyer ma demande
+        <span data-i18n="contact.form.submit">Envoyer ma demande</span>
     </button>
 
-    <p class="form-notice">* Champs obligatoires - Vos données sont sécurisées et ne seront jamais partagées</p>
-    <p class="recaptcha-info">
-    Ce site est protégé par reCAPTCHA. Les 
-    <a href="https://policies.google.com/privacy" target="_blank">Règles de confidentialité</a> et 
+    <p class="form-notice" data-i18n="contact.form.notice">* Champs obligatoires - Vos données sont sécurisées et ne seront jamais partagées</p>
+    <p class="recaptcha-info" data-i18n="contact.form.recaptcha">
+    Ce site est protégé par reCAPTCHA. Les
+    <a href="https://policies.google.com/privacy" target="_blank">Règles de confidentialité</a> et
     <a href="https://policies.google.com/terms" target="_blank">Conditions d'utilisation</a> de Google s'appliquent.
 </p>
 </form>
@@ -518,9 +524,9 @@
                         <path d="M20 32L28 40L44 24" stroke="#10b981" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3>Message envoyé avec succès ! ✅</h3>
-                <p>Merci pour votre demande. Je vous répondrai dans les 24 heures.</p>
-                <button onclick="window.location.reload()" class="btn btn-secondary" style="margin-top: 20px;">Envoyer un autre message</button>
+                <h3 data-i18n="contact.success_title">Message envoyé avec succès ! ✅</h3>
+                <p data-i18n="contact.success_message">Merci pour votre demande. Je vous répondrai dans les 24 heures.</p>
+                <button onclick="window.location.reload()" class="btn btn-secondary" style="margin-top: 20px;" data-i18n="contact.success_btn">Envoyer un autre message</button>
             </div>
 
         </div>
@@ -532,18 +538,18 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <a href="#accueil" class="logo">Meric<span>.dev</span></a>
-                <p>Développeur Web Freelance basé à Troyes</p>
+                <p data-i18n="footer.tagline">Développeur Web Freelance basé à Troyes</p>
             </div>
             <div class="footer-links">
-                <a href="#accueil">Accueil</a>
-                <a href="#services">Services</a>
-                <a href="#projets">Projets</a>
-                <a href="#contact">Contact</a>
+                <a href="#accueil" data-i18n="nav.home">Accueil</a>
+                <a href="#services" data-i18n="nav.services">Services</a>
+                <a href="#projets" data-i18n="nav.projects">Projets</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Meric - Développeur Web. Tous droits réservés.</p>
-            <p>Auto-entrepreneur en cours de création</p>
+            <p data-i18n="footer.copyright">&copy; 2025 Meric - Développeur Web. Tous droits réservés.</p>
+            <p data-i18n="footer.status">Auto-entrepreneur en cours de création</p>
         </div>
     </div>
 </footer>
