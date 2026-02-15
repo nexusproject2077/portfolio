@@ -180,6 +180,23 @@ document.querySelectorAll('.service-card, .project-card').forEach(el => {
 });
 
 // ============================================
+// HERO CONTENT FADE IN
+// ============================================
+
+const heroContent = document.querySelector('.hero-content');
+if (heroContent) {
+    window.addEventListener('DOMContentLoaded', () => {
+        heroContent.style.opacity = '1';
+        heroContent.style.transform = 'translateY(0)';
+    });
+    // Fallback si DOMContentLoaded est déjà passé
+    if (document.readyState !== 'loading') {
+        heroContent.style.opacity = '1';
+        heroContent.style.transform = 'translateY(0)';
+    }
+}
+
+// ============================================
 // FORMULAIRE DE CONTACT - VALIDATION
 // ============================================
 
